@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- You MUST include jQuery 3.4+ before Fomantic -->
+        <script src="{% static 'jquery.min.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'semantic.min.css' %}">
+        <script src="{% static 'semantic.min.js' %}"></script>
+        <script src="{% static 'htmx.min.js' %}"></script>
+    </head>
+    <body class="ui segment container">
+        <div class="ui menu">
+            <div class="header item">
+                Drupico
+            </div>
+            <a class="item">
+                About Us
+            </a>
+            <a class="item">
+                Jobs
+            </a>
+            <a class="item">
+                Free Sign Up
+            </a>
+        </div>
+        {% block content %} {% endblock %}
+    </body>
+</html>

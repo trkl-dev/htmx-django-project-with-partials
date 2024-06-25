@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load partials %}
+
+{% block content %}
+<div id="links" class="ui basic segment relaxed divided list">
+    {% partialdef link_list inline=True %}
+    <div class="item">
+        <div class="right floated content">
+            <div class="ui icon button" hx-get="{% url 'links' %}?sort=true" hx-target="#links">Sort<i class="up arrow icon"></i></div>
+        </div>
+    </div>
+    {% for link in links %}
+    <div class="item">
+        <div class="right floated content">
+            <div class="ui button">Edit</div>
+        </div>
+        <div class="content">
+            <a class="header">{{ link.title }}</a>
+            <div class="description">{{ link.url }}</div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endpartialdef %}
+</div>
+{% endblock %}
