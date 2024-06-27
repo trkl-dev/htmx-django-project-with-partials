@@ -24,7 +24,7 @@ LINK_DATA = [
 
 class LinksView(View):
 
-    def get(self, request, *_args, **_post):
+    def get(self, request, *_args, **_kwargs):
         template_name = "links/link_list.html"
         links = LINK_DATA
 
