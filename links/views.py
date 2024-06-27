@@ -26,7 +26,6 @@ class LinksView(View):
 
     def get(self, request, *_args, **_post):
         template_name = "links/link_list.html"
-
         links = LINK_DATA
 
         sort = request.GET.get("sort", "").lower() == "true"
