@@ -6,7 +6,7 @@
     {% partialdef link_list inline=True %}
     <div class="item">
         <div class="right floated content">
-            <div class="ui icon button" hx-get="{% url 'links' %}?sort=true" hx-target="#links">Sort<i class="up arrow icon"></i></div>
+            <div class="ui right labeled icon button" hx-get="{% url 'links' %}?sort=true" hx-target="#links">Sort<i class="up arrow icon"></i></div>
         </div>
     </div>
     {% for link in links %}

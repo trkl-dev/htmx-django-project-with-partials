@@ -26,18 +26,17 @@ class LinksView(View):
 
     def get(self, request, *_args, **_post):
         template_name = "links/link_list.html"
-        links = LINK_DATA.copy()
+
+        links = LINK_DATA
 
         sort = request.GET.get("sort", "").lower() == "true"
         if sort:
-            # This is a terrible cancerous mess and I feel nothing but shame. 
-            sorted_titles = sorted([link["title"] for link in LINK_DATA ])
-            new_links = [[link for link in LINK_DATA if link["title"] == title][0] for title in sorted_titles]
-            links = new_links
-            template_name = f"{template_name}#link_list"
+            template_name = "links/link_list.html#link_list"
+            links = sorted(LINK_DATA, key=lambda l: l['title'])
 
         context = {
             "links": links
         }
+
         return TemplateResponse(request, template_name, context)
 

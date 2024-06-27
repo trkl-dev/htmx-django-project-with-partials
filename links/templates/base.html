@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- You MUST include jQuery 3.4+ before Fomantic -->
-        <script src="{% static 'jquery.min.js' %}"></script>
-        <link rel="stylesheet" type="text/css" href="{% static 'semantic.min.css' %}">
-        <script src="{% static 'semantic.min.js' %}"></script>
-        <script src="{% static 'htmx.min.js' %}"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+        <script defer src="https://unpkg.com/htmx.org@1.9.11"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     </head>
     <body class="ui segment container">
         <div class="ui menu">
@@ -17,7 +17,7 @@
                 About Us
             </a>
             <a class="item">
-                Jobs
+                Support
             </a>
             <a class="item">
                 Free Sign Up
